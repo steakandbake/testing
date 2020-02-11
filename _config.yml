@@ -1,7 +1,7 @@
 # Site settings
 title: steak.and.bake - easy XTZ staking
 email: steakandbake@protonmail.com
-baseurl: "/testing" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://steakandbake.github.io" # the base hostname & protocol for your site
 author:
 street_address: tezos blockchain
