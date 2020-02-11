@@ -1,0 +1,19 @@
+{
+	"signupRequired": false,
+	"country": "Switzerland",
+	"website": "https://steakandbake.github.io",
+	"bakerDescription": "steak.and.bake - making tezos staking easy",
+	"nonStandardPaymentDescription": "",
+	"upcomingPaymentModelDescription": "",
+	"branding": {
+		"logo256":"https://steakandbake.github.io/assets/images/steakicon.png"
+	},
+	"support": {
+		"email": "steakandbake@protonmail.com",
+		"supportUrl": "https://steakandbake.github.io"
+	},
+	"social": {
+		"twitter": "https://twitter.com/steakandbaker",
+		"riot": "https://matrix.to/#/!EhZdmqoozSndhXqAGG:matrix.org?via=matrix.org"
+	}
+}
