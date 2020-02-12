@@ -21,7 +21,7 @@ featured-image-source:
 # Social settings
 500px_url:
 facebook_url:
-github_url:
+github_url: https://github.com/steakandbake
 gitlab_url: 
 googleplus_url: 
 instagram_url:
@@ -29,6 +29,9 @@ linkedin_url:
 pinterest_url:
 riot_url: https://matrix.to/#/!EhZdmqoozSndhXqAGG:matrix.org?via=matrix.org
 twitter_url: https://twitter.com/steakandbaker
+stackexchange_url: https://tezos.stackexchange.com/users/4801/steakandbake?tab=profile
+reddit_url: https://www.reddit.com/user/steakandbaker
+
 
 # Build settings
 markdown: kramdown
