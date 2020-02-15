@@ -6,8 +6,10 @@
 	"nonStandardPaymentDescription": "",
 	"upcomingPaymentModelDescription": "",
 	"branding": {
-		"logo256":"https://steakandbake.github.io/assets/images/steakicon.png"
-	},
+		"logo256": "https://steakandbake.github.io/assets/steakandbake-logo-256.png",
+		"logo1024": "https://steakandbake.github.io/assets/steakandbake-logo-1024.png",
+		"logoSvg": "https://steakandbake.github.io/assets/steakandbake-logo.svg"
+		},
 	"support": {
 		"email": "steakandbake@protonmail.com",
 		"supportUrl": "https://steakandbake.github.io"
