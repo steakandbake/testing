@@ -35,3 +35,10 @@ reddit_url: https://www.reddit.com/user/steakandbaker
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-get-json
+
+jekyll_get_json:
+  - data: bakingbad
+    json: 'https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS9M'

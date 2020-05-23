@@ -2,8 +2,11 @@
 <section id="one" class="wrapper style1 special">
 	<div class="inner">
 		<header class="major">
+			<h2>:: Current Return on Staking::<br /> {{ site.data.bakingbad.estimatedRoi | times: 100 }}%<br />
 			<h2>:: Current Status ::<br />
-			ACCEPTING NEW DELEGATIONS</h2>
+			{% if site.data.bakingbad.freeSpace < 1000 %}CLOSED FOR DELEGATIONS. {% else %}ACCEPTING NEW DELEGATIONS. {% endif %}
+			{% if site.data.bakingbad.freeSpace > 1000 %}<br />Space for {{ site.data.bakingbad.freeSpace | round(0) }} tez {% endif %}
+			</h2>
 			<p>Delegate your tez to steakandbake to start receiving your baking rewards.
 			<div class="table-wrapper">
 			<table>
