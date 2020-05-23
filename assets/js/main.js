@@ -12,6 +12,35 @@ function clipboardAddress(address) {
   $temp.remove();
 }*/
 
+const getJSON = async url => {
+  try {
+    const response = await fetch(url);
+    if(!response.ok) // check if response worked (no 404 errors etc...)
+      throw new Error(response.statusText);
+
+    const data = await response.json(); // get JSON from the response
+    return data; // returns a promise, which resolves to this data value
+  } catch(error) {
+    return error;
+  }
+}
+
+console.log("Fetching data...");
+getJSON("https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS9M").then(data => {
+  //console.log(data);
+  var freeSpace = data.freeSpace.toFixed(0);
+  //console.log(freeSpace);
+  if (freeSpace > 1000) {
+	$("#space_msg").text("OPEN: We have space for " + freeSpace + " tez.");
+	$("#currentStatus").text("ACCEPTING NEW DELEGATIONS. Space for "+ freeSpace + " tez.");
+  } else {
+	$("#space_msg").text("CLOSED: We're out of space. Thanks for looking!");
+	$("#currentStatus").text("CLOSED FOR DELEGATIONS.");
+	}
+}).catch(error => {
+  console.error(error);
+});
+
 $(document).ready(function(){
     var clipboard = new ClipboardJS('#btn_copy');
     
