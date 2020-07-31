@@ -12,6 +12,11 @@ function clipboardAddress(address) {
   $temp.remove();
 }*/
 
+function numberWithCommas(n) {
+    var parts=n.toString().split(".");
+    return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+}
+
 const getJSON = async url => {
   try {
     const response = await fetch(url);
@@ -31,6 +36,7 @@ getJSON("https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS
   var freeSpace = data.freeSpace.toFixed(0);
   //console.log(freeSpace);
   if (freeSpace > 1000) {
+  	freeSpace = numberWithCommas(freeSpace);
 	$("#space_msg").text("OPEN: We have space for " + freeSpace + " tez.");
 	$("#currentStatus").text("ACCEPTING NEW DELEGATIONS. Space for "+ freeSpace + " tez.");
   } else {
