@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lucrative - Earn and Compound your Tezos
-description: Compounding passive crypto income is now a reality with steakandbake's low fees of 5%.
+description: Compounding passive crypto income is now a reality with steakandbake's low fees of 9%.
 image: pic02.jpg
 ---
 
