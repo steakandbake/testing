@@ -30,6 +30,18 @@ const getJSON = async url => {
   }
 }
 
+function calcStaking(){
+    var amount = document.getElementById("mytez-input").value;
+    var ROS = $("#currentROS").text();
+    var ROSPerYear = (parseFloat(ROS)/100);
+    var total = parseFloat(amount*ROSPerYear).toFixed(2);
+    $("#returnOntez").text(total);
+}
+
+$('.calc-input #mytez-input').bind('keyup mouseup', function(){
+    calcStaking();
+});
+
 console.log("Fetching data...");
 getJSON("https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS9M").then(data => {
   //console.log(data);
@@ -43,6 +55,10 @@ getJSON("https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS
 	$("#space_msg").text("CLOSED: Do NOT send NEW delegations to us now. You won't get rewards. Thanks for looking!");
 	$("#currentStatus").text("CLOSED FOR DELEGATIONS.");
 	}
+	// ros calc
+	var ros = (parseFloat(data.estimatedRoi)*100).toFixed(3);;
+	$("#currentROS").text(ros);
+	calcStaking();
 }).catch(error => {
   console.error(error);
 });
