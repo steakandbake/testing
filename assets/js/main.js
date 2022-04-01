@@ -50,10 +50,10 @@ getJSON("https://api.baking-bad.org/v2/bakers/tz1dNVDWPf3Q59SdJqnjdnu277iyvReiRS
   if (freeSpace > 1000) {
   	freeSpace = numberWithCommas(freeSpace);
 	$("#space_msg").text("OPEN: We have space for " + freeSpace + " tez.");
-	$("#currentStatus").text("ACCEPTING NEW DELEGATIONS. Space for "+ freeSpace + " tez.");
+	$("#currentStatus").text("OPEN: ACCEPTING NEW DELEGATIONS. Space for "+ freeSpace + " tez.");
   } else {
-	$("#space_msg").text("CLOSED: Do NOT send NEW delegations to us now. You won't get rewards. Thanks for looking!");
-	$("#currentStatus").text("CLOSED FOR DELEGATIONS.");
+	$("#space_msg").text("FULL: Do NOT send NEW delegations to us now. You won't get rewards. Thanks for looking!");
+	$("#currentStatus").text("FULL: NO ROOM FOR NEW DELEGATIONS.");
 	}
 	// ros calc
 	var ros = (parseFloat(data.estimatedRoi)*100).toFixed(3);;
